@@ -1,0 +1,81 @@
+// Exercise 1: Calculate the Sum of Two Numbers
+
+a = 5
+b = 6
+sum = 11
+
+if a > b == c
+
+(pscode-wk5)
+
+// Exercise 2: Check if a Number is Even or Odd
+
+FUNCTION check_even_odd(number)
+	result = number %2
+	IF result == 1 THEN
+		DISPLAY "This number is ODD"
+	ELSE
+		DISPLAY "This number is EVEN"
+
+INPUT number
+CALL: check_even_odd(number)
+
+(pscode-wk5)
+
+// Exercise 3: 
+Write pseudo code that will perform the following.    
+
+a) Read in 5 separate numbers.   
+b) Calculate the average of the five numbers.
+c) Find the smallest (minimum) and largest (maximum) of the five entered numbers.
+d) Write out the results found from steps b and c with a message describing what they are
+
+(pscode-wk5)
+
+FUNCTION calculate5numbers():
+	numbers = empty list
+	FOR i =1 to 5:
+		DISPLAY "Enter number $i : "
+		numbers = INPUT number from user
+
+	average = CALL:calculateAvg(numbers)
+	minimum = CALL:findMin(numbers)
+	maximum = CALL:findMax(numbers)
+
+	DISPLAY "The average is " + average
+	DISPLAY "The minimum is " + minimum
+	DISPLAY "The maximum is " + maximum
+
+FUNCTION calculateAvg(numbers):
+	sum = 0
+	i = 0
+	FOREACH number in numbers:
+		sum += number
+		i+=1
+	average = sum / i
+
+	RETURN average
+
+FUNCTION findMin(numbers)
+	min = FIRST element of numbers
+
+	FOREACH number in numbers:
+		IF number < min
+			min = number
+
+	RETURN min
+
+FUNCTION findMax(numbers)
+	max = first element of numbers
+
+	FOREACH number in numbers:
+		IF number > max
+			max = number
+	
+	RETURN max
+
+
+CALL: calculate5numbers()
+
+
+-- END --
